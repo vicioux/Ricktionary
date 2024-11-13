@@ -7,20 +7,23 @@
 
 import SwiftUI
 import Entities
+import Kingfisher
 
 struct CharacterRowView: View {
     var item: CharacterEntity
     
     var body: some View {
         HStack {
-            AsyncImage(url: item.image) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .scaledToFit()
-            .frame(width: 120, height: 120)
-            .padding(.trailing, 5)
+            
+            KFImage(item.image)
+                .placeholder {
+                    ProgressView()
+                }
+                .resizable()
+                .scaledToFit()
+                .frame(width: 120, height: 120)
+                .padding(.trailing, 5)
+            
             VStack(alignment:.leading) {
                 Text(item.name)
                     .font(.system(size: 16))

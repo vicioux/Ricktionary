@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 
 struct CharacterDetailView: View {
     @StateObject
@@ -25,35 +25,22 @@ struct CharacterDetailView: View {
             .foregroundColor(.secondary)
     }
     
-    func InfoRow(titleText: String, infoText: String) -> some View {
-        return VStack(alignment:.leading) {
-            titleTextView(titleText)
-            infoTextView(infoText)
-        } .padding(.vertical, 8)
-    }
-    
     struct ImageContainer: View {
         let url: URL
         let width: CGFloat
         let height: CGFloat
         
         var body: some View {
-            AsyncImage(url: url) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .scaledToFit()
-            .frame(width: width, height: height)
+            KFImage(url)
+                .placeholder {
+                    ProgressView()
+                }
+                .resizable()
+                .scaledToFit()
+                .frame(width: width, height: height)
         }
     }
-    
-    private func customDivider() -> some View {
-        return Divider()
-            .background(Color.gray)
-            .frame(height: UIScreen.main.bounds.height / 30)
-    }
-    
+
     func infoViewPill(label: String, value: String) -> some View {
         return VStack {
             titleTextView(label)
@@ -67,20 +54,6 @@ struct CharacterDetailView: View {
         .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 6)
     }
 
-    func topPills() -> some View {
-        return HStack(alignment: .center) {
-            InfoRow(titleText: "Location", infoText: viewModel.char.location)
-            customDivider()
-            InfoRow(titleText: "Gender", infoText: viewModel.char.gender)
-            customDivider()
-            InfoRow(titleText: "Status", infoText: viewModel.char.status)
-        }
-        .frame(maxWidth: .infinity)
-        .background(Color(.white))
-        .cornerRadius(8)
-        .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 6)
-    }
-    
     func floatSection() -> some View {
         return VStack(alignment: .leading, spacing: 4) {
             Text(viewModel.char.name)
@@ -88,7 +61,7 @@ struct CharacterDetailView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.black)
             
-            Text(viewModel.char.species)
+            Text(viewModel.char.gender)
                 .font(.footnote)
                 .foregroundColor(.black)
         }
@@ -118,9 +91,13 @@ struct CharacterDetailView: View {
                 floatSection()
             }
             .padding(.bottom, 30)
-            
-            topPills()
         
+            
+            HStack(spacing: 30) {
+                infoViewPill(label: "Specie", value: viewModel.char.species)
+                infoViewPill(label: "Status", value: viewModel.char.status)
+            }
+            
             HStack(spacing: 30) {
                 infoViewPill(label: "Location", value: viewModel.char.location)
                 infoViewPill(label: "Origin", value: viewModel.char.origin)

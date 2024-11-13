@@ -18,10 +18,19 @@
     "Error" : {
       "extractionState" : "manual"
     },
-    "Hello, world!" : {
-
+    "Location" : {
+      "extractionState" : "manual"
+    },
+    "Origin" : {
+      "extractionState" : "manual"
     },
     "Search Characters" : {
+      "extractionState" : "manual"
+    },
+    "Specie" : {
+      "extractionState" : "manual"
+    },
+    "Status" : {
       "extractionState" : "manual"
     }
   },
