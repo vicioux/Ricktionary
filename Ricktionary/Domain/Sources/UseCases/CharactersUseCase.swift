@@ -10,7 +10,7 @@ import Entities
 import RepositoryProtocol
 
 public protocol CharactersUseCase {
-    func execute() async throws -> (Int, [CharacterEntity])
+    func execute(page: Int) async throws -> (Int, [CharacterEntity])
 }
 
 public final class DefaultCharacterUseCase: CharactersUseCase {
@@ -21,7 +21,7 @@ public final class DefaultCharacterUseCase: CharactersUseCase {
         self.characterRepository = characterRepository
     }
     
-    public func execute() async throws -> (Int, [CharacterEntity]) {
-        return try await characterRepository.fetchCharacters()
+    public func execute(page: Int) async throws -> (Int, [CharacterEntity]) {
+        return try await characterRepository.fetchCharacters(page: page)
     }
 }

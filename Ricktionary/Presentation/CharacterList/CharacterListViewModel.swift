@@ -21,11 +21,20 @@ class CharacterListViewModel: ObservableObject {
     
     @Published var chars: [CharacterEntity] = []
     @Published var loadState: DataState = .loading
+    @Published var searchText: String = ""
+    
+    var filteredChars: [CharacterEntity] {
+        guard !searchText.isEmpty else { return chars }
+        return chars.filter { char in
+            char.name.lowercased().contains(searchText.lowercased())
+        }
+    }
     
     private var currentPage = 1
     private var totalPages: Int?
+    private var isLoadingPage = false
     
-    private var hasMorePages: Bool {
+    var hasMorePages: Bool {
         guard let totalPages else { return true }
         return currentPage <= totalPages
     }
@@ -34,25 +43,42 @@ class CharacterListViewModel: ObservableObject {
         self.charUseCase = charUseCase
     }
     
-    func loadChars() async {
-        await updateUIState(.loading)
+    func loadChars(isFirstLoad: Bool = false) async {
+        guard !isLoadingPage else { return }
+        if !searchText.isEmpty { return }
+        
+        if isFirstLoad {
+            await updateUIState(.loading)
+        }
+        
+        isLoadingPage = true
         
         do {
-            let (pages, results) = try await charUseCase.execute()
+            let (pages, results) = try await charUseCase.execute(page: currentPage)
+            totalPages = pages
+            currentPage += 1
             
             await MainActor.run {
-                chars = results
-                loadState = results.isEmpty ? .empty : .loaded
+                if isFirstLoad {
+                    chars = results
+                    loadState = results.isEmpty ? .empty : .loaded
+                } else {
+                    chars.append(contentsOf: results)
+                }
             }
             
         } catch {
-            await updateUIState(.error)
+            if isFirstLoad {
+                await updateUIState(.error)
+            }
         }
+        
+        isLoadingPage = false
     }
     
     @MainActor
     private func updateUIState(_ state: DataState) async {
         loadState = state
     }
-    
 }
+

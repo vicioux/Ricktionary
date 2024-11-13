@@ -16,8 +16,8 @@ public class CharacterRickpository: CharacterRepositoryProtocol {
     
     public init() {}
     
-    public func fetchCharacters() async throws -> (Int, [CharacterEntity]) {
-        let charResult = try await charService.fetchCharacters()
+    public func fetchCharacters(page: Int) async throws -> (Int, [CharacterEntity]) {
+        let charResult = try await charService.fetchCharacters(page: page)
         let charEntities = charResult.results.map { $0.toCharEntity() }
         return (charResult.info.pages, charEntities)
     }

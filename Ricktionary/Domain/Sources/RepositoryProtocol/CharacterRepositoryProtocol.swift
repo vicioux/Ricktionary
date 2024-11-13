@@ -8,5 +8,5 @@
 import Entities
 
 public protocol CharacterRepositoryProtocol {
-    func fetchCharacters() async throws -> (Int, [CharacterEntity])
+    func fetchCharacters(page: Int) async throws -> (Int, [CharacterEntity])
 }

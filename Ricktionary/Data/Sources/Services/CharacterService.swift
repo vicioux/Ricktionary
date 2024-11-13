@@ -8,11 +8,12 @@
 import Foundation
 
 public class CharacterService {
+    private let baseURL = "https://rickandmortyapi.com/api/character"
     
     public init() { }
     
-    public func fetchCharacters() async throws -> CharacterResponse {
-        guard let url = URL(string: "https://rickandmortyapi.com/api/character/?page=2") else {
+    public func fetchCharacters(page: Int) async throws -> CharacterResponse {
+        guard let url = URL(string: "\(baseURL)?page=\(page)") else {
             throw URLError(.badURL)
         }
         
