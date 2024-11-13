@@ -45,7 +45,7 @@ Used for efficient loading and caching of character images from the Rick & Morty
 - Character detail view
 - Search functionality
 - Image caching
-- Clean architecture implementation
+- MVVM with a small Clean architecture implementation
 - Modular design
 
 ### Requirements
