@@ -10,6 +10,7 @@ import SwiftUI
 import Repository
 import Services
 import UseCases
+import Entities
 
 final class DependenciesContainer {
     let useCases: UseCases
@@ -27,12 +28,21 @@ extension DependenciesContainer {
         let viewModel = makeCharacterListViewModel()
         return CharacterListView(viewModel: viewModel)
     }
+    
+    func makeCharacterDetail(for char: CharacterEntity) -> some View {
+        let viewModel = makeCharacterDetailViewModel(char: char)
+        return CharacterDetailView(viewModel: viewModel)
+    }
 }
 
 // MARK: View Models
 extension DependenciesContainer {
     func makeCharacterListViewModel() -> CharacterListViewModel {
         return CharacterListViewModel(charUseCase: useCases.charactersUseCase)
+    }
+    
+    func makeCharacterDetailViewModel(char: CharacterEntity) -> CharacterDetailViewModel {
+        return CharacterDetailViewModel(char: char)
     }
 }
 

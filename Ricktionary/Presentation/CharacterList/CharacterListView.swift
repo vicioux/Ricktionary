@@ -13,6 +13,10 @@ struct CharacterListView: View {
     
     private func RowItem(_ item: CharacterEntity) -> some View {
         return CharacterRowView(item: item)
+            .overlay { // Using this overlay to avoid chevron icon to detail -_- Yeah this is kind of hacky -_-
+                NavigationLink(destination: DependenciesContainer.shared.makeCharacterDetail(for: item)) { /*Empty space*/ }
+                    .opacity(0)
+            }
             .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
     }
@@ -48,7 +52,7 @@ struct CharacterListView: View {
                         ForEach(viewModel.filteredChars) { item in
                             RowItem(item)
                         }
-                        if viewModel.hasMorePages && viewModel.filteredChars.isEmpty {
+                        if viewModel.hasMorePages && viewModel.searchText.isEmpty {
                             LoadingRow()
                         }
                     }

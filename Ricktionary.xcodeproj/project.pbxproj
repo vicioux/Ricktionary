@@ -32,6 +32,10 @@
 		554841C62CE40E7400BBA4F8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 554841C42CE40E7400BBA4F8 /* Localizable.xcstrings */; };
 		554841C92CE4139600BBA4F8 /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841C82CE4139600BBA4F8 /* DependenciesContainer.swift */; };
 		554841CA2CE4139600BBA4F8 /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841C82CE4139600BBA4F8 /* DependenciesContainer.swift */; };
+		554841CD2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841CC2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift */; };
+		554841CE2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841CC2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift */; };
+		554841D02CE46DE700BBA4F8 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841CF2CE46DE700BBA4F8 /* CharacterDetailView.swift */; };
+		554841D12CE46DE700BBA4F8 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841CF2CE46DE700BBA4F8 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,8 @@
 		554841C12CE40B3800BBA4F8 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		554841C42CE40E7400BBA4F8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		554841C82CE4139600BBA4F8 /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
+		554841CC2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		554841CF2CE46DE700BBA4F8 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +190,7 @@
 		554841B92CE3BBBB00BBA4F8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				554841CB2CE46D1B00BBA4F8 /* CharacterDetail */,
 				554841BA2CE3FE5700BBA4F8 /* CharacterList */,
 			);
 			path = Presentation;
@@ -205,6 +212,15 @@
 				554841C82CE4139600BBA4F8 /* DependenciesContainer.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		554841CB2CE46D1B00BBA4F8 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				554841CC2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift */,
+				554841CF2CE46DE700BBA4F8 /* CharacterDetailView.swift */,
+			);
+			path = CharacterDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,12 +364,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554841CD2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift in Sources */,
 				5548417C2CE38EC900BBA4F8 /* ContentView.swift in Sources */,
 				554841BF2CE406B700BBA4F8 /* CharacterRowView.swift in Sources */,
 				554841C22CE40B3800BBA4F8 /* CharacterListView.swift in Sources */,
 				554841BC2CE3FE9B00BBA4F8 /* CharacterListViewModel.swift in Sources */,
 				554841C92CE4139600BBA4F8 /* DependenciesContainer.swift in Sources */,
 				5548417A2CE38EC900BBA4F8 /* RicktionaryApp.swift in Sources */,
+				554841D02CE46DE700BBA4F8 /* CharacterDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +382,8 @@
 				554841C02CE406B700BBA4F8 /* CharacterRowView.swift in Sources */,
 				554841BD2CE3FE9B00BBA4F8 /* CharacterListViewModel.swift in Sources */,
 				554841C32CE40B3800BBA4F8 /* CharacterListView.swift in Sources */,
+				554841D12CE46DE700BBA4F8 /* CharacterDetailView.swift in Sources */,
+				554841CE2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift in Sources */,
 				5548418B2CE38ECD00BBA4F8 /* RicktionaryTests.swift in Sources */,
 				554841CA2CE4139600BBA4F8 /* DependenciesContainer.swift in Sources */,
 			);

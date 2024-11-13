@@ -32,7 +32,7 @@ class CharacterListViewModel: ObservableObject {
     
     private var currentPage = 1
     private var totalPages: Int?
-    private var isLoadingPage = false
+    private var isLoadingChars = false
     
     var hasMorePages: Bool {
         guard let totalPages else { return true }
@@ -44,14 +44,15 @@ class CharacterListViewModel: ObservableObject {
     }
     
     func loadChars(isFirstLoad: Bool = false) async {
-        guard !isLoadingPage else { return }
+        guard !isLoadingChars else { return }
         if !searchText.isEmpty { return }
         
         if isFirstLoad {
+            currentPage = 1
             await updateUIState(.loading)
         }
         
-        isLoadingPage = true
+        isLoadingChars = true
         
         do {
             let (pages, results) = try await charUseCase.execute(page: currentPage)
@@ -73,7 +74,7 @@ class CharacterListViewModel: ObservableObject {
             }
         }
         
-        isLoadingPage = false
+        isLoadingChars = false
     }
     
     @MainActor
