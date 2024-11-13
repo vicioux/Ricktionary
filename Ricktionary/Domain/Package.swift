@@ -19,16 +19,26 @@ let package = Package(
             name: "Entities",
             targets: ["Entities"]
         ),
+        .library(
+            name: "DomainMocks",
+            targets: ["DomainMocks"]
+        ),
     ],
     targets: [
         .target(
-            name: "UseCases"),
+            name: "Entities"),
+        .target(
+            name: "UseCases",
+            dependencies: ["Entities", "RepositoryProtocol"]
+        ),
         .target(
             name: "RepositoryProtocol",
             dependencies: ["Entities"]
         ),
         .target(
-            name: "Entities"),
+            name: "DomainMocks",
+            dependencies: ["UseCases", "RepositoryProtocol", "Entities"]
+        ),
         .testTarget(
             name: "DomainTests",
             dependencies: ["UseCases", "RepositoryProtocol", "Entities"]),
