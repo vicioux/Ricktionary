@@ -7,6 +7,7 @@
 
 
 import XCTest
+@testable import Ricktionary
 @testable import Entities
 @testable import DomainMocks
 @testable import UseCases

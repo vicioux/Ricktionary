@@ -11,8 +11,6 @@
 		5548417E2CE38ECC00BBA4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5548417D2CE38ECC00BBA4F8 /* Assets.xcassets */; };
 		554841812CE38ECC00BBA4F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554841802CE38ECC00BBA4F8 /* Preview Assets.xcassets */; };
 		5548418B2CE38ECD00BBA4F8 /* RicktionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5548418A2CE38ECD00BBA4F8 /* RicktionaryTests.swift */; };
-		554841952CE38ECD00BBA4F8 /* RicktionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841942CE38ECD00BBA4F8 /* RicktionaryUITests.swift */; };
-		554841972CE38ECD00BBA4F8 /* RicktionaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841962CE38ECD00BBA4F8 /* RicktionaryUITestsLaunchTests.swift */; };
 		554841A82CE399FF00BBA4F8 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 554841A72CE399FF00BBA4F8 /* Data */; };
 		554841AB2CE39A1200BBA4F8 /* Repository in Frameworks */ = {isa = PBXBuildFile; productRef = 554841AA2CE39A1200BBA4F8 /* Repository */; };
 		554841AD2CE39A1200BBA4F8 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = 554841AC2CE39A1200BBA4F8 /* Services */; };
@@ -36,9 +34,10 @@
 		554841D02CE46DE700BBA4F8 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841CF2CE46DE700BBA4F8 /* CharacterDetailView.swift */; };
 		554841D12CE46DE700BBA4F8 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841CF2CE46DE700BBA4F8 /* CharacterDetailView.swift */; };
 		554841D52CE4828000BBA4F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 554841D42CE4828000BBA4F8 /* Kingfisher */; };
-		554841D82CE4B28A00BBA4F8 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841D72CE4B28A00BBA4F8 /* CharacterListViewModelTests.swift */; };
 		554841D92CE4B28A00BBA4F8 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554841D72CE4B28A00BBA4F8 /* CharacterListViewModelTests.swift */; };
 		554841DD2CE4B4B800BBA4F8 /* DomainMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 554841DC2CE4B4B800BBA4F8 /* DomainMocks */; };
+		55CD63552CE4DD9300AB8577 /* RicktionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD63532CE4DD9300AB8577 /* RicktionaryUITests.swift */; };
+		55CD63562CE4DD9300AB8577 /* RicktionaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD63542CE4DD9300AB8577 /* RicktionaryUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +65,6 @@
 		554841862CE38ECD00BBA4F8 /* RicktionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicktionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5548418A2CE38ECD00BBA4F8 /* RicktionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicktionaryTests.swift; sourceTree = "<group>"; };
 		554841902CE38ECD00BBA4F8 /* RicktionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicktionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		554841942CE38ECD00BBA4F8 /* RicktionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicktionaryUITests.swift; sourceTree = "<group>"; };
-		554841962CE38ECD00BBA4F8 /* RicktionaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicktionaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		554841A72CE399FF00BBA4F8 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 		554841AE2CE39A2900BBA4F8 /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
 		554841B02CE39DBF00BBA4F8 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
@@ -79,6 +76,9 @@
 		554841CC2CE46D3400BBA4F8 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		554841CF2CE46DE700BBA4F8 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		554841D72CE4B28A00BBA4F8 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
+		55CD63492CE4D6AD00AB8577 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		55CD63532CE4DD9300AB8577 /* RicktionaryUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RicktionaryUITests.swift; sourceTree = "<group>"; };
+		55CD63542CE4DD9300AB8577 /* RicktionaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RicktionaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +169,8 @@
 		554841932CE38ECD00BBA4F8 /* RicktionaryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				554841942CE38ECD00BBA4F8 /* RicktionaryUITests.swift */,
-				554841962CE38ECD00BBA4F8 /* RicktionaryUITestsLaunchTests.swift */,
+				55CD63532CE4DD9300AB8577 /* RicktionaryUITests.swift */,
+				55CD63542CE4DD9300AB8577 /* RicktionaryUITestsLaunchTests.swift */,
 			);
 			path = RicktionaryUITests;
 			sourceTree = "<group>";
@@ -178,6 +178,7 @@
 		554841A92CE39A1200BBA4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55CD63492CE4D6AD00AB8577 /* XCTest.framework */,
 				554841AE2CE39A2900BBA4F8 /* SwiftData.framework */,
 			);
 			name = Frameworks;
@@ -328,6 +329,7 @@
 					};
 					5548418F2CE38ECD00BBA4F8 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = 554841752CE38EC900BBA4F8;
 					};
 				};
@@ -394,7 +396,6 @@
 				554841BF2CE406B700BBA4F8 /* CharacterRowView.swift in Sources */,
 				554841C22CE40B3800BBA4F8 /* CharacterListView.swift in Sources */,
 				554841BC2CE3FE9B00BBA4F8 /* CharacterListViewModel.swift in Sources */,
-				554841D82CE4B28A00BBA4F8 /* CharacterListViewModelTests.swift in Sources */,
 				554841C92CE4139600BBA4F8 /* DependenciesContainer.swift in Sources */,
 				5548417A2CE38EC900BBA4F8 /* RicktionaryApp.swift in Sources */,
 				554841D02CE46DE700BBA4F8 /* CharacterDetailView.swift in Sources */,
@@ -420,8 +421,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554841972CE38ECD00BBA4F8 /* RicktionaryUITestsLaunchTests.swift in Sources */,
-				554841952CE38ECD00BBA4F8 /* RicktionaryUITests.swift in Sources */,
+				55CD63562CE4DD9300AB8577 /* RicktionaryUITestsLaunchTests.swift in Sources */,
+				55CD63552CE4DD9300AB8577 /* RicktionaryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +570,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ricktionary/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				ENABLE_TESTING_SEARCH_PATHS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)\n$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -581,6 +585,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTest,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kashell.Ricktionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -599,6 +607,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Ricktionary/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)\n$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -610,6 +621,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTest,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kashell.Ricktionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -660,6 +675,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -667,6 +683,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kashell.RicktionaryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Ricktionary;
@@ -677,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
