@@ -1,0 +1,29 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Characters" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ricktionary"
+          }
+        }
+      }
+    },
+    "Empty" : {
+      "extractionState" : "manual"
+    },
+    "Error" : {
+      "extractionState" : "manual"
+    },
+    "Hello, world!" : {
+
+    },
+    "Search Characters" : {
+      "extractionState" : "manual"
+    }
+  },
+  "version" : "1.0"
+}
