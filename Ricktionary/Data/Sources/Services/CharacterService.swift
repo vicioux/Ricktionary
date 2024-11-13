@@ -18,7 +18,8 @@ public class CharacterService {
         }
         
         do {
-            let request = URLRequest(url: url)
+            var request = URLRequest(url: url)
+            request.cachePolicy = .returnCacheDataElseLoad
             let (data, response) = try await URLSession.shared.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
